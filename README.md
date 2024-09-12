@@ -1,5 +1,11 @@
 # Programación 2024 - 2025
 
+En este repositorio encontraréis todo el material que iremos viendo durante el curso 2024 - 2025. 
+
+El repo servirá básicamente de guía y de enlaces a ejercicios en este mismo repositorio u otros repositorios con proyectos y ejercicios que iremos viendo en clase, o pequeños tutoriales y cursos para ir aprendiendo diferentes conceptos.
+
+Comenzaremos programando en Python para aprender las bases mientras vamos introduciendo alguna diferencia y similutud con Java, lenguaje con el que terminaremos el curso y al que nos pasaremos en cuanto introduzcamos la programación orientada a objetos o POO.
+
 ## Temario
 
 1. [Algoritmos y tipos de datos](/tema1/)
