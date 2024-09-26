@@ -1,6 +1,13 @@
-# Ejercicios tema 1
+# Tema 1 - Algoritmos y estructuras de datos
 
-## Enunciados
+## Apuntes y ejemplos
+
+- [Hello World en Python](../hello-world.py)
+- [Estructuras básicas de programación](./estructuras_basicas.py)
+- [Operadores básicos de Python](./operadores_basicos.py)
+- [Las sentencias break y continue](./ejemplo_break_continue.py)
+
+## Enunciados ejercicios
 
 ### Ejercicio 1
 
@@ -89,7 +96,7 @@ Diseñar un algoritmo que lea un conjunto de números reales, los cuente y calcu
 
 Diseñar un algoritmo que lea un número entero de teclado, visualice sus dígitos y calcule la suma de los dígitos que sean pares. Para extraer los dígitos de un número usaremos un bucle que divida el número por 10 sucesivamente. El resto de cada división corresponde a cada uno de los dígitos.
 
-## Soluciones
+## Solucionario
 
 1. [Farenheit a Celsius](./ej1.py)
 2. [Volumen y Área de una esfera](./ej2.py)
