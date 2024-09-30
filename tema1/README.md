@@ -6,6 +6,8 @@
 - [Estructuras básicas de programación](./estructuras_basicas.py)
 - [Operadores básicos de Python](./operadores_basicos.py)
 - [Las sentencias break y continue](./ejemplo_break_continue.py)
+- [Funciones básicas con cadenas](./funciones_basicas_con_cadenas.py)
+- [Comprobando tipos de datos](./comprobadores_tipos.py)
 
 ## Enunciados ejercicios
 
