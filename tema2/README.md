@@ -3,9 +3,12 @@
 ## Apuntes y ejemplos
 
 - [Funciones en python](funciones.py)
+- [Alcance de las variables](alcance_variables.py)
 - [La función main](funcion_main.py)
 
 ## Enunciados ejercicios
+
+*Nota*: Todos los ejercicios del tema anterior pueden rehacerse utilizando funciones para practicar.
 
 ### Ejercicio 1
 
