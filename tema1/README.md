@@ -1,5 +1,9 @@
 # Tema 1 - Algoritmos y estructuras de datos
 
+## Glosario de términos generales
+
+- [Glosario](glosario.md)
+
 ## Apuntes y ejemplos
 
 - [Hello World en Python](../hello-world.py)
