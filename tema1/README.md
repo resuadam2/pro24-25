@@ -12,6 +12,7 @@
 - [Las sentencias break y continue](./ejemplo_break_continue.py)
 - [Funciones básicas con cadenas](./funciones_basicas_con_cadenas.py)
 - [Comprobando tipos de datos](./comprobadores_tipos.py)
+- [Ejercicio bucles y letras grandes - ejemplo "U"](ejercicio_tipo_examen.py)
 
 ## Enunciados ejercicios
 
@@ -145,3 +146,6 @@ Diseñar un algoritmo que lea un número entero de teclado, visualice sus dígit
 - [Laboratorio 2.6.1.9](lab2-6-1-9.py)
 - [Laboratorio 2.6.1.10](lab2-6-1-10.py)
 - [Laboratorio 2.6.1.11](lab2-6-1-11.py)
+
+### Así resolvimos los ejercicios en clase:
+[Soluciones clase](./soluciones_clase/)

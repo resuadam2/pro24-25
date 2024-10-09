@@ -20,3 +20,31 @@
 # *    *
 # *    *
 #   **
+
+# Solución:
+
+altura = int(input("Introduzca la altura de la U: "))
+
+if altura < 4:
+    print("La altura mínima debe ser de 4")
+else:
+    for i in range(altura):
+        if i == altura - 1: # Si estamos en la base
+            print("   " + "*" * (altura- 2))
+        else: # Si estamos en el resto de la letra
+            print(" *" + " " * (altura) + "*")
+print("Fin del programa") # Mostramos el mensaje de fin de programa
+
+# Solución usando else sin el if:
+
+altura = int(input("Introduzca la altura de la U: "))
+
+if altura < 4:
+    print("La altura mínima debe ser de 4")
+else:
+    for i in range(altura - 1):
+        # Si estamos en el resto de la letra
+        print(" *" + " " * (altura) + "*")
+    else: # Si estamos en la base
+        print("   " + "*" * (altura - 2))
+print("Fin del programa") # Mostramos el mensaje de fin de programa
