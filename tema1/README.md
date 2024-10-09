@@ -131,3 +131,17 @@ Diseñar un algoritmo que lea un número entero de teclado, visualice sus dígit
 18. [Suma de pares, conteo y media impares](ej18.py)
 19. [Cálculo de la media, varianza y desviación](ej19.py)
 20. [Extractor de dígitos](ej20.py)
+
+## Laboratorios del curso resueltos
+
+- [Laboratorio 2.1.1.6](lab2-1-1-6.py)
+- [Laboratorio 2.1.1.18](lab2-1-1-18.py)
+- [Laboratorio 2.1.1.19](lab2-1-1-19.py)
+- [Laboratorio 2.2.1.11](lab2-2-1-11.py)
+- [Laboratorio 2.4.1.7](lab2-4-1-7.py)
+- [Laboratorio 2.4.1.9](lab2-4-1-9.py)
+- [Laboratorio 2.4.1.10](lab2-4-1-10.py)
+- [Laboratorio 2.5.1.2](lab2-5-1-2.py)
+- [Laboratorio 2.6.1.9](lab2-6-1-9.py)
+- [Laboratorio 2.6.1.10](lab2-6-1-10.py)
+- [Laboratorio 2.6.1.11](lab2-6-1-11.py)
