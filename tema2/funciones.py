@@ -32,6 +32,42 @@ def saludar(nombre):
 
 saludar("Juan")
 
+# Importante
+
+# Los parámetros se pasan por valor, lo que significa que si se modifica el valor de un parámetro dentro de la función, no se modifica el valor original.   
+# Los parámetros solo existen dentro de la función, por lo que no se pueden acceder desde fuera de la función.  
+# Los argumentos son los valores que se pasan a la función cuando se llama a la función.
+
+# Sobre la sobrecarga de funciones:
+# Python no soporta la sobrecarga de funciones, es decir, no se pueden definir dos funciones con el mismo nombre y diferente número de parámetros.  
+# Si se definen dos funciones con el mismo nombre, la última función definida reemplaza a la primera función definida.  
+
+# Ejemplo
+
+def sumar(a, b):
+    return a + b
+
+def sumar(a, b, c):
+    return a + b + c
+
+resultado = sumar(5, 3, 2)
+print(resultado)
+# TypeError: sumar(2,3) takes 3 positional arguments but 2 were given
+
+# Parámetros por defecto
+
+# Los parámetros por defecto son parámetros que tienen un valor predeterminado.
+# Los parámetros por defecto se definen con un valor asignado en la definición de la función.   
+# Los parámetros por defecto son opcionales, es decir, si no se pasan valores a los parámetros, se utilizan los valores por defecto.    
+
+# Ejemplo
+
+def saludar(nombre="mundo"):
+    print(f"Hola, {nombre}!")
+
+saludar()
+saludar("Juan")
+
 # Retorno de valores
 
 # Una función puede devolver un valor utilizando la palabra reservada return.
@@ -166,31 +202,3 @@ import platform
 
 print(platform.system()) # Sistema operativo
 print(platform.release()) # Versión del sistema operativo
-
-# Ejemplo
-
-import subprocess
-
-subprocess.run(["ls", "-l"]) # Ejecutar un comando
-
-# Ejemplo
-
-import requests
-
-response = requests.get("https://www.google.com")
-
-print(response.status_code) # Código de estado
-print(response.text) # Contenido de la página
-
-# Ejemplo
-
-import json
-
-data = '{"name": "John", "age": 30, "city": "New York"}'
-
-json_data = json.loads(data)
-
-print(json_data["name"])
-print(json_data["age"])
-print(json_data["city"])
-
