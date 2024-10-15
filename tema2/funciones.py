@@ -68,6 +68,76 @@ def saludar(nombre="mundo"):
 saludar()
 saludar("Juan")
 
+# Parámetros con nombre
+
+# Los parámetros con nombre son parámetros que se pasan a la función utilizando el nombre del parámetro.
+# Los parámetros con nombre se definen con el nombre del parámetro seguido de un signo igual y el valor del parámetro.  
+# Los parámetros con nombre se pueden pasar en cualquier orden.
+
+# Ejemplo
+
+def saludar(nombre, apellido):
+    print(f"Hola, {nombre} {apellido}!")
+
+saludar(apellido="Pérez", nombre="Juan")
+
+# Parámetros variables
+
+# Los parámetros variables son parámetros que pueden tener un número variable de valores.
+# Los parámetros variables se definen con un asterisco (*) antes del nombre del parámetro.
+# Los parámetros variables se pasan como una tupla.
+
+# Ejemplo
+
+def sumar(*numeros):
+    suma = 0
+    for numero in numeros:
+        suma += numero
+    return suma
+
+resultado = sumar(5, 3, 2)
+print(resultado)
+
+# Parámetros con nombre variables
+
+# Los parámetros con nombre variables son parámetros que pueden tener un número variable de valores con nombre. 
+# Los parámetros con nombre variables se definen con dos asteriscos (**) antes del nombre del parámetro.    
+# Los parámetros con nombre variables se pasan como un diccionario.
+
+# Ejemplo
+
+def saludar(**nombres):
+    for nombre, valor in nombres.items():
+        print(f"{nombre}: {valor}")
+
+saludar(nombre="Juan", apellido="Pérez")
+
+# Parámetros por posición y por nombre
+
+# Los parámetros por posición son los parámetros que se pasan a la función en el orden en que se definen los parámetros.    
+# Los parámetros por nombre son los parámetros que se pasan a la función utilizando el nombre del parámetro.    
+
+# Ejemplo
+
+def saludar(nombre, apellido):
+    print(f"Hola, {nombre} {apellido}!")
+
+saludar("Juan", "Pérez")
+saludar(apellido="Pérez", nombre="Juan")
+
+# Parámetros por posición y por nombre variables
+
+# Los parámetros por posición y por nombre variables son los parámetros que se pasan a la función en el orden en que se definen los parámetros y utilizando el nombre del parámetro.    
+
+# Ejemplo
+
+def saludar(nombre, apellido, **otros):
+    print(f"Hola, {nombre} {apellido}!")
+    for otro, valor in otros.items():
+        print(f"{otro}: {valor}")
+
+saludar("Juan", "Pérez", edad=30, ciudad="Madrid")
+
 # Retorno de valores
 
 # Una función puede devolver un valor utilizando la palabra reservada return.
