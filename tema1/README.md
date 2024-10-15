@@ -150,8 +150,13 @@ Diseñar un algoritmo que lea un número entero de teclado, visualice sus dígit
 - [Laboratorio 3.1.1.10](lab3-1-1-10.py)
 - [Laboratorio 3.1.1.11](lab3-1-1-11.py)
 - [Laboratorio 3.1.1.12](lab3-1-1-12.py)
-- [Laboratorio 3.2.1.9](lab3-1-1-9.py)
-- [Laboratorio 2.6.1.11](lab2-6-1-11.py)
+- [Laboratorio 3.2.1.3](lab3-2-1-3.py)
+- [Laboratorio 3.2.1.6](lab3-2-1-6.py)
+- [Laboratorio 3.2.1.9](lab3-2-1-9.py)
+- [Laboratorio 3.2.1.10](lab3-2-1-10.py)
+- [Laboratorio 3.2.1.11](lab3-2-1-11.py)
+- [Laboratorio 3.2.1.14](lab3-2-1-14.py)
+- [Laboratorio 3.2.1.15](lab3-2-1-15.py)
 
 ### Así resolvimos los ejercicios en clase:
 [Soluciones clase](./soluciones_clase/)
