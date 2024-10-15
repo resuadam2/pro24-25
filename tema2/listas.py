@@ -356,4 +356,3 @@ for i in [0, 2]:
     for j in [0, 2]:
         print(lista[i][j])
 
-
