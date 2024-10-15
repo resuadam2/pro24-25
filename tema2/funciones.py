@@ -85,7 +85,7 @@ saludar(apellido="Pérez", nombre="Juan")
 
 # Los parámetros variables son parámetros que pueden tener un número variable de valores.
 # Los parámetros variables se definen con un asterisco (*) antes del nombre del parámetro.
-# Los parámetros variables se pasan como una tupla.
+# Los parámetros variables se pasan como una tupla. 
 
 # Ejemplo
 
@@ -97,6 +97,8 @@ def sumar(*numeros):
 
 resultado = sumar(5, 3, 2)
 print(resultado)
+
+# Nota: Una tupla es una secuencia inmutable de elementos, hablaremos de ellas más adelante.
 
 # Parámetros con nombre variables
 
@@ -111,6 +113,8 @@ def saludar(**nombres):
         print(f"{nombre}: {valor}")
 
 saludar(nombre="Juan", apellido="Pérez")
+
+# Nota: Un diccionario es una colección desordenada de elementos, hablaremos de ellos más adelante.
 
 # Parámetros por posición y por nombre
 
@@ -138,6 +142,22 @@ def saludar(nombre, apellido, **otros):
 
 saludar("Juan", "Pérez", edad=30, ciudad="Madrid")
 
+# Parámetros por tipo de datos
+
+# Los parámetros por tipo de datos son los parámetros que se pasan a la función con un tipo de datos específico.    
+# Los parámetros por tipo de datos se definen utilizando la anotación de tipo de datos.
+# Estas anotaciones son opcionales y no afectan el comportamiento de la función.
+# Las anotaciones de tipo de datos se definen con dos puntos (:) después del nombre del parámetro y el tipo de datos.   
+
+# Ejemplo
+
+def sumarEnteros(a: int, b: int):
+    return a + b
+
+resultado = sumarEnteros(5, 3)
+print(resultado)
+print(sumarEnteros("Hola", " esto funciona igualmente, pero podría no ser lo esperado"))
+
 # Retorno de valores
 
 # Una función puede devolver un valor utilizando la palabra reservada return.
@@ -152,6 +172,26 @@ def sumar(a, b):
 resultado = sumar(5, 3)
 print(resultado)
 
+# Retorno de valores indicando el tipo de datos
+
+# El tipo de datos de retorno de una función se puede indicar utilizando la anotación de tipo de datos.
+# La anotación de tipo de datos se define con una flecha (->) después de los paréntesis de la función y el tipo de datos de retorno.
+# Estas anotaciones son opcionales y no afectan el comportamiento de la función.
+
+# Ejemplo
+
+def sumar(a: int, b: int) -> int:
+    return a + b
+
+resultado = sumar(5, 3)
+print(resultado)
+print(sumar("Hola", " esto funciona igualmente, pero podría no ser lo esperado"))
+
+# Retorno de valores múltiples
+
+# Una función puede devolver múltiples valores utilizando una tupla.
+# Para devolver múltiples valores, se utiliza la palabra reservada return seguida de los valores separados por comas.
+
 # Ejemplo
 
 def sumar_y_restar(a, b):
@@ -162,7 +202,9 @@ def sumar_y_restar(a, b):
 resultado = sumar_y_restar(5, 3)
 print(resultado)
 
-# Funciones anónimas (lambda)
+# Nota: Una tupla es una secuencia inmutable de elementos, hablaremos de ellas más adelante.
+
+# Funciones anónimas (lambda) - !!! Esta parte es meramente informativa de momento !!!
 
 # Una función anónima es una función que no tiene nombre.
 # Se define utilizando la palabra reservada lambda.
