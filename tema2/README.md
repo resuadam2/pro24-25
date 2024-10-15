@@ -5,6 +5,7 @@
 - [Funciones en python](funciones.py)
 - [Alcance de las variables](alcance_variables.py)
 - [La función main](funcion_main.py)
+- [Listas en Python](listas.py)
 
 ## Enunciados ejercicios
 
