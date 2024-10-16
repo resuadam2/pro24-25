@@ -2,9 +2,9 @@
 
 ## Apuntes y ejemplos
 
-- [Funciones en python](funciones.py)
-- [Alcance de las variables](alcance_variables.py)
-- [La función main](funcion_main.py)
+- [Funciones en python](./apuntes_y_ejemplos/funciones.py)
+- [Alcance de las variables](./apuntes_y_ejemplos/alcance_variables.py)
+- [La función main](./apuntes_y_ejemplos/funcion_main.py)
 
 ## Enunciados ejercicios
 
@@ -85,15 +85,15 @@ El cuerpo del programa debe probar todas las funciones.
 
 ## Solucionario
 
-1. [Intercambio de valores](ej1.py)
-2. [Mayor de tres](ej2.py)
-3. [Cálculo del número de Euler](ej3.py)
-4. [Conteo de un caracter en una secuencia limitada](ej4.py)
+1. [Intercambio de valores](./solucionario/ej1.py)
+2. [Mayor de tres](./solucionario/ej2.py)
+3. [Cálculo del número de Euler](./solucionario/ej3.py)
+4. [Conteo de un caracter en una secuencia limitada](./solucionario/ej4.py)
 5. Inversión de los dígitos de un número
-   1. [Usando Strings](ej5.py)
-   2. [Usando lógica matemática](ej5b.py)
-6. [Números amigos](ej6.py)
-7. [Número perfecto](ej7.py)
-8. [Registro y login - variables globales](ej8.py)
-9. [Calculadora a través de funciones](ej9.py)
-10. [Áreas y perímetros](ej10.py)
+   1. [Usando Strings](./solucionario/ej5.py)
+   2. [Usando lógica matemática](./solucionario/ej5b.py)
+6. [Números amigos](./solucionario/ej6.py)
+7. [Número perfecto](./solucionario/ej7.py)
+8. [Registro y login - variables globales](./solucionario/ej8.py)
+9. [Calculadora a través de funciones](./solucionario/ej9.py)
+10. [Áreas y perímetros](./solucionario/ej10.py)
