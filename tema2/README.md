@@ -1,10 +1,11 @@
-# Tema 1 - Algoritmos y estructuras de datos
+# Tema 2 - Técnicas de diseño de programas
 
 ## Apuntes y ejemplos
 
 - [Funciones en python](./apuntes_y_ejemplos/funciones.py)
 - [Alcance de las variables](./apuntes_y_ejemplos/alcance_variables.py)
 - [La función main](./apuntes_y_ejemplos/funcion_main.py)
+- [Listas en Python](./apuntes_y_ejemplos/listas.py)
 
 ## Enunciados ejercicios
 
