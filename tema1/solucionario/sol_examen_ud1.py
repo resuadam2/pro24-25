@@ -54,7 +54,7 @@ palabra = input("Introduce una palabra: ")
 
 palabra = palabra.lower()
 
-if palabra == palabra[::-1]:
+if palabra == palabra[::-1]: # [::-1] invierte la cadena
     print("La palabra", palabra, "es un palíndromo.")
 else:
     print("La palabra", palabra, "no es un palíndromo.")

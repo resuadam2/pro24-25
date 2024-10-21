@@ -204,31 +204,6 @@ print(resultado)
 
 # Nota: Una tupla es una secuencia inmutable de elementos, hablaremos de ellas más adelante.
 
-# Funciones anónimas (lambda) - !!! Esta parte es meramente informativa de momento !!!
-
-# Una función anónima es una función que no tiene nombre.
-# Se define utilizando la palabra reservada lambda.
-# Se utiliza para funciones pequeñas y sencillas.
-# Se utiliza para funciones que se van a utilizar una sola vez.
-
-# Sintaxis
-# lambda parametros: expresion
-
-# Ejemplo
-
-suma = lambda a, b: a + b
-
-resultado = suma(5, 3)
-print(resultado)
-
-# Ejemplo
-
-cuadrado = lambda x: x ** 2
-
-resultado = cuadrado(5)
-
-print(resultado)
-
 # Funciones predefinidas
 
 # Python tiene muchas funciones predefinidas que se pueden utilizar sin necesidad de importar ningún módulo.
