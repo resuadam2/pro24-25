@@ -10,7 +10,7 @@ def suma(a, b):
     x = a + b
     return x
 # print(x) # Error: x no está definida
-y = 5
+y = suma(3, 2)
 print(suma(3, 2)) # Imprime 5
 print(y) # Imprime 5
 
@@ -24,5 +24,14 @@ def suma(a, b):
 
 y = 7
 print(suma(3, 2)) # Imprime 5
+
 print(y) # Imprime 5
 
+# En Python, las variables locales tienen prioridad sobre las variables globales.
+def suma(a, b):
+    x = a + b
+    return x
+
+x = suma(3, 8)
+print(suma(3, 2)) # Imprime 5
+print(x) # Imprime 11

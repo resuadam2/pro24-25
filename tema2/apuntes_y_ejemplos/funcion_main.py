@@ -23,9 +23,16 @@
 
 # Ejemplo de uso:
 
+def saludar(nombre):
+    print(f"Hola, {nombre}!")
+
+import sys
+
 def hello_world():
-    print("Hola, mundo!")
+    print(f"Hola, {sys.argv[0]}!")
+
 
 if __name__ == "__main__":
     hello_world()
+    saludar("Juan")
 
