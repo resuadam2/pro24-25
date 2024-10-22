@@ -82,6 +82,68 @@ Realiza un programa que tenga varias funciones para calcular el área y el perí
 cuadrados y triángulos equiláteros.
 El cuerpo del programa debe probar todas las funciones.
 
+### Ejercicio 11
+
+Diseñar una función que determine la posición del valor máximo de una lista de enteros y otra para indicar cuál es ese valor máximo.
+Incluir un programa que pruebe ambas funciones.
+
+### Ejercicio 12
+
+Diseñar una función que devuelva una lista invertida a partir de otra.
+Incluir un programa que pruebe la función.
+
+### Ejercicio 13
+
+Diseñar una función para sumar dos matrices bidimensionales de enteros.
+Las matrices se representarán como listas de listas y deben pasarse como argumentos a las funciones.    
+Incluir un programa que pruebe ambas funciones.
+
+### Ejercicio 14
+
+En el ejercicio anterior ya viste que visualizar las listas como matrices simplemente imprimiendolas con print no es suficiente. Diseña una función que imprima una matriz bidimensional de enteros de manera que se vea como una matriz (no es necesario incluir los paréntesis grandes, tan solo separar los números con tabulaciones y saltos de línea). 
+Incluir un programa que pruebe la función.
+
+### Ejercicio 15
+
+Diseñar una función para multiplicar dos matrices bidimensionales de enteros.
+Las matrices se representarán como listas de listas y deben pasarse como argumentos a las funciones.
+Para multiplicar dos matrices, el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.   
+La multiplicación de matrices se calcula multiplicando cada elemento de la fila de la  primera matriz por cada elemento de la columna de la segunda matriz y sumando los resultados. 
+Incluir un programa que pruebe la función.
+
+Nota: Puedes usar la función del ejercicio 14 para visualizar mejor las matrices
+
+### Ejercicio 16
+
+Diseñar una función que nos compruebe si una matriz bidimensional de enteros es simétrica.
+Las matrices se representarán como listas de listas y deben pasarse como argumentos a las funciones.
+Una matriz es simétrica si es cuadrada y es igual a su traspuesta.
+La traspuesta de una matriz se obtiene intercambiando filas por columnas.
+Incluir más funciones si es necesario.
+Incluir un programa que pruebe la función.
+
+### Ejercicio 17
+
+Diseñar varias funciones para cumplir con los siguientes requisitos:
+1. Función que lea una serie de números enteros positivos desde teclado y los almacene en una lista.
+2. Función que reciba una lista de enteros y devuelva la suma de los elementos.
+3. Función que reciba una lista de enteros y devuelva el mayor.
+4. Función que reciba una lista de enteros y devuelva el menor.
+5. Función que reciba una lista de enteros y devuelva la media.
+6. Función que reciba una lista de enteros y devuelva la mediana.
+7. Función que reciba una lista de enteros y devuelva la varianza.
+8. Función que reciba una lista de enteros y devuelva la desviación típica.
+9. función que reciba una lista de enteros y devuelva si es simétrica o no.
+10. Función que reciba una lista de enteros y devuelva si cada elemento es un número primo o no.    
+11. Función que reciba una lista de enteros y devuelva si cada elemento es un número capicúa o no.  
+Incluir un programa que pruebe todas las funciones.
+
+### Ejercicio 18
+
+Diseñar una serie de funciones para calcular el area y el perímetro de las
+siguientes figuras geométricas: circunferencia, rectángulo, cuadrado y triángulo equilátero.
+Incluir un programa que pruebe todas las funciones.
+
 ## Solucionario
 
 1. [Intercambio de valores](./solucionario/ej1.py)
