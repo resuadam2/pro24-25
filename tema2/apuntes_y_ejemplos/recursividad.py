@@ -64,7 +64,7 @@ def fibonacci(n):
     else:
         return fibonacci(n-1) + fibonacci(n-2)
     
-print(fibonacci(10)) # 55
+print(fibonacci(4)) 
 
 """
 En este caso, la función fibonacci se llama a sí misma para calcular
