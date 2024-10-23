@@ -1,7 +1,7 @@
 # Test para testear las funciones de prueba2.py
 
 import unittest
-from offtopic.file_to_test import factorial, numPerfecto, numPrimo
+from file_to_test import factorial, numPerfecto, numPrimo
 
 class TestingPrueba2(unittest.TestCase):
         

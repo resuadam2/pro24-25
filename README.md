@@ -32,6 +32,7 @@ Comenzaremos programando en Python para aprender las bases mientras vamos introd
 
 - [Documentación oficial de Python](https://docs.python.org/3/)
 - [Curso Python Edube.org](https://edube.org/study/pe1)
+- [Test en Python](./offtopic/tests_en_Python/)
 
 ### Java
 
