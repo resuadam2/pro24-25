@@ -158,3 +158,15 @@ Incluir un programa que pruebe todas las funciones.
 8. [Registro y login - variables globales](./solucionario/ej8.py)
 9. [Calculadora a través de funciones](./solucionario/ej9.py)
 10. [Áreas y perímetros](./solucionario/ej10.py)
+11. Máximo valor de una lista
+    1.  [Versión usando max()](./solucionario/ej11.py)
+    2.  [Versión recorriendo la lista](./solucionario/ej11b.py)
+12. Invertir una lista
+    1.  [Versión con slicing](./solucionario/ej12.py)
+    2.  [Versión sin slicing](./solucionario/ej12b.py)
+13. [Suma de matrices](./solucionario/ej13.py)
+14. [Imprimir en formato matriz](./solucionario/ej14.py)
+15. [Producto de matrices](./solucionario/ej15.py)
+16. [Matrices simétricas](./solucionario/ej16.py)
+17. [Popurrí de funciones para trabajar con listas de enteros](./solucionario/ej17.py)
+18. [Área y perímetro de figuras geométricas](./solucionario/ej18.py)
