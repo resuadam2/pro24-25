@@ -26,7 +26,7 @@ Comenzaremos programando en Python para aprender las bases mientras vamos introd
 
 - [Hello World en Java](HelloWorld.java)
 
-## Enlaces externos de interés
+## Enlaces externos de interés y contenido offtopic
 
 ### Python
 
@@ -37,3 +37,7 @@ Comenzaremos programando en Python para aprender las bases mientras vamos introd
 ### Java
 
 - [Documentación oficial de Java](https://docs.oracle.com/en/java/javase/22/docs/api/index.html)
+
+### Offtopic
+
+- [Memes de coders](./offtopic/memes/)
