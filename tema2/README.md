@@ -56,10 +56,8 @@ Incluir el algoritmo principal que realice la llamada a dicha función.
 
 ### Ejercicio 8
 
-Implementar un programa de registro y login de usuarios. En primer lugar se ejecutará el código de registro,
-que solicitará un nombre de usuario y una contraseña. A continuación, se ejecutará el código de login, que solicitará
-el nombre de usuario y la contraseña. Si el nombre de usuario y la contraseña coinciden con los introducidos en el
-registro, se mostrará un mensaje de bienvenida. En caso contrario, se mostrará un mensaje de error.
+Implementar un programa de registro y login de usuarios. En primer lugar se ejecutará el código de registro, que solicitará un nombre de usuario y una  contraseña. A continuación, se ejecutará el código de login, que solicitará
+el nombre de usuario y la contraseña. Si el nombre de usuario y la contraseña coinciden con los introducidos en el registro, se mostrará un mensaje de bienvenida. En caso contrario, se mostrará un mensaje de error.
 Necesitaremos una función para el registro y otra para el login.
 Y las llamadas a las funciones de registro y login se realizarán en el algoritmo principal.
 
@@ -138,12 +136,6 @@ Diseñar varias funciones para cumplir con los siguientes requisitos:
 11. Función que reciba una lista de enteros y devuelva si cada elemento es un número capicúa o no.  
 Incluir un programa que pruebe todas las funciones.
 
-### Ejercicio 18
-
-Diseñar una serie de funciones para calcular el area y el perímetro de las
-siguientes figuras geométricas: circunferencia, rectángulo, cuadrado y triángulo equilátero.
-Incluir un programa que pruebe todas las funciones.
-
 ## Solucionario
 
 1. [Intercambio de valores](./solucionario/ej1.py)
@@ -169,4 +161,3 @@ Incluir un programa que pruebe todas las funciones.
 15. [Producto de matrices](./solucionario/ej15.py)
 16. [Matrices simétricas](./solucionario/ej16.py)
 17. [Popurrí de funciones para trabajar con listas de enteros](./solucionario/ej17.py)
-18. [Área y perímetro de figuras geométricas](./solucionario/ej18.py)
