@@ -9,6 +9,12 @@
 
 ## Enunciados ejercicios
 
+*Nota*: En todos los ejercicios debe hacerse una captura de las posibles excepciones.
+
+### Ejercicio 1
+
+
+
 
 ## Solucionario
 
