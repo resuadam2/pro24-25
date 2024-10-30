@@ -1,5 +1,17 @@
 # Tema 2 - Técnicas de diseño de programas
 
+En este tema dejamos de programar todo en un único bloque para empezar a distribuir el código en funciones, evitando bloques de código repetitivos y empezando a refactorizar y limpiar nuestras soluciones.
+
+También vemos como manejar la función main, muchas funciones predefinidas de Python y como importar módulos para usarlos.
+
+Hacemos incapié en el paso de parámetros y el retorno de valores.
+
+Para terminar con las funciones veremos también el uso de la recursividad.
+
+Además vemos la primera estructura de datos típica de los lenguajes de programación, las listas.
+
+Veremos también como podemos añadir complejidad a las mismas haciendo listas de listas para representar matrices.
+
 ## Apuntes y ejemplos
 
 - [Funciones en python](./apuntes_y_ejemplos/funciones.py)

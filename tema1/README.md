@@ -1,5 +1,12 @@
 # Tema 1 - Algoritmos y estructuras de datos
 
+En este primer tema nos centraremos en conocer los tipos básicos de datos comunes a la mayoría de los lenguajes de programación. Veremos peculiaridades de Python y nos centraremos en las principales estructuras básicas de la programación como son:
+- Las estructuras secuenciales.
+- Las estructuras condicionales.
+- Las estructuras repetitivas o bucles.
+
+Veremos también típicas soluciones a ejercicios básicos, problemas de conversión de tipos, las peculiaridades de un lenguaje de tipado dinámico como es Python y también pequeñas peculiaridades de que sea interpretado en lugar de compilado.
+
 ## Glosario de términos generales
 
 - [Glosario](./apuntes_y_ejemplos/glosario.md)

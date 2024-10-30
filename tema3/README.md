@@ -1,4 +1,8 @@
-# Tema 2 - Técnicas de diseño de programas
+# Tema 3 - Tipos de datos estructurados
+
+En este tema vemos antes de nada la captura de excepciones en bloques try-except, junto con sus variantes con else y finally.
+
+También vemos otras 3 nuevas estructuras de datos básicas de Python pero existentes en muchos otros lenguajes como son las tuplas, los diccionarios y los conjuntos.
 
 ## Apuntes y ejemplos
 
