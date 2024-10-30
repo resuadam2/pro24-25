@@ -161,3 +161,10 @@ Incluir un programa que pruebe todas las funciones.
 15. [Producto de matrices](./solucionario/ej15.py)
 16. [Matrices simétricas](./solucionario/ej16.py)
 17. [Popurrí de funciones para trabajar con listas de enteros](./solucionario/ej17.py)
+
+## Laboratorios del curso resueltos
+
+- [Laboratorio ](./labs/)
+
+### Así resolvimos los ejercicios en clase:
+[Soluciones clase](./soluciones_clase/)
