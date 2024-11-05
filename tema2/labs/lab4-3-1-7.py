@@ -16,9 +16,20 @@ def is_year_leap(year):
         return True
 
 def days_in_month(year, month):
-#
-# Escribe tu código aquí.
-#
+	if month < 1 or month > 12:
+		return None
+	if month == 2:
+		if is_year_leap(year):
+			return 29
+		else:
+			return 28
+	elif month in [4, 6, 9, 11]:
+		return 30
+	else:
+		return 31
+
+
+
 
 test_years = [1900, 2000, 2016, 1987]
 test_months = [2, 2, 1, 11]
