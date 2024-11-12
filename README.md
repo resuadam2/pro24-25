@@ -36,6 +36,7 @@ Comenzaremos programando en Python para aprender las bases mientras vamos introd
 
 ### Java
 
+- [Curso Java para principiantes en Codecademy](https://www.codecademy.com/learn/learn-java)
 - [Documentación oficial de Java](https://docs.oracle.com/en/java/javase/22/docs/api/index.html)
 
 ### Offtopic
