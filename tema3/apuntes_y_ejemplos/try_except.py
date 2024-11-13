@@ -162,3 +162,84 @@ finally:
 # SyntaxError: Se produce al intentar ejecutar un código con una sintaxis incorrecta.
 
 # Documentación oficial de Python sobre excepciones: https://docs.python.org/3/library/exceptions.html
+
+# raise Exception 
+
+# La instrucción raise se utiliza para lanzar una excepción en un programa.
+
+# Sintaxis:
+
+# raise Excepción
+# Ejemplo:
+
+try:
+    raise Exception('Mensaje de error')
+except Exception as e:
+    print(e)
+
+# En este ejemplo, se lanza una excepción Exception con un mensaje de error.
+# La excepción se captura en el bloque try-except y se muestra el mensaje de error.
+# Esto nos sirve para lanzar excepciones personalizadas en un programa o para lanzar 
+# excepciones en un código que no está dentro de un bloque try-except o en base a una condición.
+
+# Ejemplo de raise en base a una condición:
+
+x = 0
+
+try:
+    if x == 0:
+        raise Exception('x no puede ser cero')
+except Exception as e:
+    print(e)
+
+
+
+# Ejemplo de control de datos de entrada
+
+numCorrecto = False
+while not numCorrecto:
+    try:
+        x = int(input('Introduce un número: '))
+    except ValueError as e:
+        print('Error:', e)
+    else:
+        print('Número:', x)
+        numCorrecto = True
+
+# En este ejemplo, se pide al usuario que introduzca un número.
+# Si el usuario introduce un valor que no es un número, se produce una excepción ValueError.
+# La excepción se captura en el bloque try-except y se muestra un mensaje de error.
+# Si el usuario introduce un número, se muestra el número y se sale del bucle while.
+
+# Ejemplo de control de datos de entrada con excepción personalizada
+
+numCorrecto = False
+while not numCorrecto:
+    try:
+        x = int(input('Introduce un número positivo: '))
+        if x <= 0:
+            raise Exception('x no puede ser cero o negativo')
+    except ValueError as e:
+        print('Error:', e)
+    except Exception as e:
+        print('Error:', e)
+    else:
+        print('Número:', x)
+        numCorrecto = True
+
+# En este ejemplo, se pide al usuario que introduzca un número positivo.
+# Si el usuario introduce un valor que no es un número, se produce una excepción ValueError.
+# Si el usuario introduce un número negativo o cero, se lanza una excepción Exception.
+# La excepción se captura en el bloque try-except y se muestra un mensaje de error.
+# Si el usuario introduce un número positivo, se muestra el número y se sale del bucle while.
+
+
+try:
+    x = int(input('Introduce un número positivo: '))
+    y = 1 / x
+except ValueError as e:
+    print('Error: Introduce un número válido')
+except ZeroDivisionError as e:
+    print('Error: x no puede ser cero')
+except Exception as e:
+    print('Error inesperado')
