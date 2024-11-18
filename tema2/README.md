@@ -18,6 +18,8 @@ Veremos también como podemos añadir complejidad a las mismas haciendo listas d
 - [Alcance de las variables](./apuntes_y_ejemplos/alcance_variables.py)
 - [La función main](./apuntes_y_ejemplos/funcion_main.py)
 - [Listas en Python](./apuntes_y_ejemplos/listas.py)
+- [Ejemplo de una posible solución del examen](./solucionario/sol_examen_ud2.py)
+- [Tests unitarios para probar las funciones del examen](./solucionario/tests_examen_ud2.py)
 
 ## Enunciados ejercicios
 
