@@ -92,7 +92,14 @@ print(repetir("hola", 0)) # ""
 # Escribir una función que reciba una lista de números y devuelva una lista con los cuadrados de los números. Si la lista contiene algún elemento que no es un número debe devolver un mensaje de error.    
 
 def cuadrados(lista: list) -> list:
-    pass 
+    try:
+        return [i ** 2 for i in lista]
+    except TypeError:
+        print("Error: Los elementos de la lista deben ser números")
+        return None
+    except:
+        print("Error inesperado")
+        return None
     
 # Pruebas
 print(cuadrados([1, 2, 3, 4, 5])) # [1, 4, 9, 16, 25]
@@ -104,7 +111,14 @@ print(cuadrados([])) # []
 # Escribir una función que reciba una tupla y una posición y devuelva el elemento de la tupla en la posición indicada. Si la posición es mayor que la longitud de la tupla debe devolver un mensaje de error.
 
 def elemento(tupla: tuple, pos: int):
-    pass 
+    try:
+        return tupla[pos] 
+    except IndexError:
+        print("Error: La posición no existe")
+    except TypeError:
+        print("Error: El segundo argumento debe ser un número")
+    except:
+        print("Error inesperado")
     
 # Pruebas
 print(elemento((1, 2, 3, 4, 5), 2)) # 3
@@ -128,10 +142,23 @@ print(valor({"a": 1, "b": 2, "c": 3}, 2)) # Error: El segundo argumento debe ser
 # Escribir una función que reciba una lista de números y devuelva el número más grande. Si la lista está vacía debe devolver un mensaje de error.   
 
 def maximo(lista: list) -> float:
-    pass
+    try:
+        return max(lista)
+    except ValueError:
+        print("Error: Lista vacía")
+        return None
+    except TypeError:
+        print("Error: Debe ser una lista de números")
+        return None
+    except:
+        print("Error inesperado")
+        return None
     
 # Pruebas
 print(maximo([1, 2, 3, 4, 5])) # 5
+print(maximo(["a","B"])) 
+print(maximo([[3,3],[1,4]])) # [3, 3]
+print(maximo(2134)) # Error: Los elementos de la lista deben ser números
 print(maximo([])) # Error: Lista vacía
 print(maximo([1, "a", 3, 4, 5])) # Error: Los elementos de la lista deben ser números   
 

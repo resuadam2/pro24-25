@@ -48,12 +48,27 @@ print(ordenada_inversa(345))
 # Escribir una función que reciba una tupla de elementos e indique si son todos distintos o no. 
 
 def distintos(tupla: tuple) -> bool:
-    pass
+    try:
+        if not isinstance(tupla, tuple):
+            raise TypeError
+        for i in range(len(tupla)):
+            for j in range(i+1, len(tupla)):
+                if tupla[i] == tupla[j]:
+                    return False
+        return True
+    except TypeError:
+        print("Error: esta función solo admite tuplas")
+        return None
+    except:
+        print("Error inesperado")
+        return None
 
 # Pruebas
 print(distintos((1, 2, 3, 4, 5))) # True
 print(distintos((1, 2, 3, 4, 5, 1))) # False
 print(distintos(())) # True
+print(distintos(4)) # None # Error
+print(distintos([1, 2, 3, 4, 5])) # None # Error
 
 # Ejercicio 4
 # Escribir una función que reciba una tupla de elementos e indique si es capicúa o no.  

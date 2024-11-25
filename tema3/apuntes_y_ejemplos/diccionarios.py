@@ -29,7 +29,7 @@ diccionario = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 print(diccionario)
 
 # Crear un diccionario con claves de diferentes tipos
-diccionario_tipos = {1: 'uno', 'dos': 2, 3.0: 'tres', True: 'cuatro'}
+diccionario_tipos = {1: 'uno', 'dos': 2, 3.0: 'tres', True: 'cuatro', False: 'cinco', 0: 'seis'}
 print(diccionario_tipos)
 
 # Crear un diccionario con diccionarios
@@ -153,5 +153,4 @@ while i < len(claves):
     clave = claves[i]
     print(clave, diccionario[clave])
     i += 1
-
 

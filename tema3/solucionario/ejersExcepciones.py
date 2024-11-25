@@ -110,12 +110,14 @@ print(elemento((1, 2, 3, 4, 5), "a")) # Error: El segundo argumento debe ser un
 
 def valor(diccionario: dict, clave: str):
     try:
+        if not isinstance(diccionario, dict):
+            raise TypeError
         return diccionario[clave]
     except KeyError:
         print("Error: La clave no existe")
         return None
     except TypeError:
-        print("Error: El segundo argumento debe ser una cadena")
+        print("Error: Debe introducir un diccionario")
         return None
     except:
         print("Error")
@@ -124,7 +126,8 @@ def valor(diccionario: dict, clave: str):
 # Pruebas
 print(valor({"a": 1, "b": 2, "c": 3}, "b")) # 2
 print(valor({"a": 1, "b": 2, "c": 3}, "d")) # Error: La clave no existe
-print(valor({"a": 1, "b": 2, "c": 3}, 2)) # Error: El segundo argumento debe ser una cadena
+print(valor({"a": 1, "b": 2, "c": 3, 2: 4}, 2)) # 4
+print(valor([1, 2, 3], 2)) # Error de tipo
 
 # Ejercicio 7
 
