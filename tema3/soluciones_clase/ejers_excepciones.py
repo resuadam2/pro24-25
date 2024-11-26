@@ -127,15 +127,29 @@ print(elemento((1, 2, 3, 4, 5), "a")) # Error: El segundo argumento debe ser un
 
 # Ejercicio 6
 
-# Escribir una función que reciba un diccionario y una clave y devuelva el valor asociado a la clave. Si la clave no existe debe devolver un mensaje de error.  
+# Escribir una función que reciba un diccionario y una clave y devuelva el valor asociado a la clave. 
+# Si la clave no existe debe devolver un mensaje de error.  
 
 def valor(diccionario: dict, clave: str):
-    pass
+    try:
+        if not isinstance(diccionario, dict):
+            raise TypeError("Error: el primer parámetro debe ser un diccionario")
+        if not isinstance(clave, str):
+            raise TypeError("Error: el segundo parámetro debe ser una string")
+        return diccionario[clave]
+    except KeyError:
+        print("Error: La clave no existe")
+    except TypeError as e:
+        print(e)
+    except:
+        print("Error inesperado")
     
 # Pruebas
 print(valor({"a": 1, "b": 2, "c": 3}, "b")) # 2
 print(valor({"a": 1, "b": 2, "c": 3}, "d")) # Error: La clave no existe
-print(valor({"a": 1, "b": 2, "c": 3}, 2)) # Error: El segundo argumento debe ser una cadena
+print(valor([1,2,3,4], 2)) # Error: el primer parámetro debe ser un diccionario
+print(valor({"a": 1, 2: 2, "c": 3}, 2)) # 2
+print(valor({"a": 1, 2: 2, "c": 3}, ["a"])) # 1
 
 # Ejercicio 7
 

@@ -6,40 +6,41 @@
 # Los conjuntos no permiten elementos duplicados.
 # Los conjuntos no permiten elementos nulos.
 # Los conjuntos no permiten elementos vacíos.
+# Los conjuntos no permiten elementos mutables.
 # Los conjuntos pueden contener cualquier tipo de dato.
-# Los conjuntos pueden contener listas.
 # Los conjuntos pueden contener tuplas.
-# Los conjuntos pueden contener diccionarios.
-# Los conjuntos pueden contener otros conjuntos.
-# Los conjuntos pueden contener cualquier combinación de los tipos de datos anteriores.
+# Los conjuntos no pueden contener listas.
+# Los conjuntos no pueden contener diccionarios.
+# Los conjuntos no pueden contener otros conjuntos.
+# Los conjuntos pueden contener cualquier combinación de los tipos de datos anteriores, siempre que estos sean inmutables.
 
 # Crear un conjunto vacío
 conjunto_vacio = set()
 print(conjunto_vacio)
 
 # Crear un conjunto con elementos
-conjunto = {1, 2, 3, 4, 5}
+conjunto = {1, 2, 3, 4, 5, 5, 5}
 print(conjunto)
 
 # Crear un conjunto con elementos de diferentes tipos
-conjunto_tipos = {1, 'hola', 3.14, True}
+conjunto_tipos = {1, 'hola', 3.14, True, False, 0, -5}
 print(conjunto_tipos)
 
 # Crear un conjunto con listas
-conjunto_listas = {[1, 2], [3, 4], [5, 6]}
-print(conjunto_listas)
+# conjunto_listas = {[1, 2], [3, 4], [5, 6]} # Error: type list is unhashable
+# print(conjunto_listas)
 
 # Crear un conjunto con tuplas
 conjunto_tuplas = {(1, 2), (3, 4), (5, 6)}
 print(conjunto_tuplas)
 
 # Crear un conjunto con diccionarios
-conjunto_diccionarios = {{'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6}}
-print(conjunto_diccionarios)
+# conjunto_diccionarios = {{'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6}} # Error: type dict is unhashable
+# print(conjunto_diccionarios)
 
 # Crear un conjunto con otros conjuntos
-conjunto_conjuntos = {{1, 2}, {3, 4}, {5, 6}}
-print(conjunto_conjuntos)
+# conjunto_conjuntos = {{1, 2}, {3, 4}, {5, 6}} # Error: type set is unhashable
+# print(conjunto_conjuntos)
 
 # Acceso a los elementos de un conjunto
 conjunto = {1, 2, 3, 4, 5}
@@ -117,3 +118,10 @@ del conjunto
 # También son útiles para eliminar duplicados de una lista o una tupla.
 # Los conjuntos son más eficientes que las listas y las tuplas para comprobar si un elemento
 # está en el conjunto.
+
+lista = [5,5,1,5,2,2,5, "2",3,"4", 3, "4", 5, "5", 5]
+print(lista)
+conjunto = set(lista)
+lista = list(conjunto)
+print(conjunto)
+print(lista)
