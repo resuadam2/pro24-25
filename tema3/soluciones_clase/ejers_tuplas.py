@@ -109,40 +109,105 @@ print(capicua_v2([1, 2, 3, 2, 1])) # None # Error
 # Escribir una función que reciba una tupla de números y un valor n y devuelva una lista con los elementos de la tupla que son múltiplos de n.
 
 def multiplos(tupla: tuple, n: int) -> list:
-    pass
+    try:
+        return [i for i in tupla if i % n == 0]
+    except ZeroDivisionError:
+        print("Error: el divisor no puede ser 0")
+    except TypeError:
+        print("Error: la tupla debe contener solo números")
+    except:
+        print("Error inesperado")
     
 
 # Pruebas
 print(multiplos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2)) # [2, 4, 6, 8, 10]
 print(multiplos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 3)) # [3, 6, 9]
+print(multiplos((1, 2, 3, 4, 5, 6, "H", 8, 9, 10), 5)) # Error
+print(multiplos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), "H")) # Error
+print(multiplos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 0)) # [0]
+print(multiplos((), 4))
+print(multiplos(4, 2)) # Error
 
 # Ejercicio 6
 # Escribir una función que reciba una tupla de números y devuelva su máximo y su mínimo.    
 
 def maximo_minimo(tupla: tuple) -> tuple:
-    pass
+    try:
+        return (max(tupla), min(tupla))
+    except ValueError:
+        print("Error: la tupla está vacía")
+    except TypeError:
+        print("Error: la tupla debe contener solo números")
+    except:
+        print("Error inesperado")
     
 
 # Pruebas
 print(maximo_minimo((1, 2, 3, 4, 5))) # (5, 1)
 print(maximo_minimo((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))) # (10, 1)
+print(maximo_minimo(())) # Error
       
 # Ejercicio 7
 # Escribir una función que reciba una tupla de números y devuelva su media y su varianza.   
 
 def media_varianza(tupla: tuple) -> tuple:
-    pass
+    try:
+        media = sum(tupla) / len(tupla)
+        varianza = sum((x - media)**2 for x in tupla) / len(tupla)
+        return (media, varianza)
+    except ZeroDivisionError:
+        print("Error: la tupla está vacía")
+    except TypeError:
+        print("Error: la tupla debe contener solo números")
+    except:
+        print("Error inesperado")
 
 # Pruebas
 print(media_varianza((1, 2, 3, 4, 5))) # (3.0, 2.0)
 print(media_varianza((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))) # (5.5, 8.25)
+print(media_varianza(())) # (0.0, 0.0)
+print(media_varianza((1, 2, 3, 4, 5, 6, "H", 8, 9, 10))) # Error
+print(media_varianza(1234)) # Error
+print(media_varianza([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])) # (6.0, 10.0)
       
 # Ejercicio 8
 # Escribir una función que reciba una tupla de números y devuelva la tupla con sus elementos ordenados de menor a mayor.
 
 def ordenar_tupla(tupla: tuple) -> tuple:
-    pass
+    try:
+        return tuple(sorted(tupla))
+    except TypeError:
+        print("Error: la tupla debe contener solo números")
+    except:
+        print("Error inesperado")
+
+def ordenar_tupla_v2(tupla: tuple) -> tuple:
+    try:
+        lista = list(tupla)
+        lista.sort()
+        return tuple(lista)
+    except TypeError:
+        print("Error: la tupla debe contener solo números")
+    except:
+        print("Error inesperado")
+
+def ordenar_tupla_v3(tupla: tuple) -> tuple:
+    try:
+        lista = list(tupla)
+        for i in range(len(lista)):
+            for j in range(i+1, len(lista)):
+                if lista[i] > lista[j]:
+                    lista[i], lista[j] = lista[j], lista[i]
+        return tuple(lista)
+    except TypeError:
+        print("Error: la tupla debe contener solo números")
+    except:
+        print("Error inesperado")
 
 # Pruebas
 print(ordenar_tupla((5, 4, 3, 2, 1))) # (1, 2, 3, 4, 5)
 print(ordenar_tupla((1, 2, 3, 5, 4))) # (1, 2, 3, 4, 5)
+print(ordenar_tupla(())) # ()
+print(ordenar_tupla(1234)) # Error
+print(ordenar_tupla([1, 2, 3, 4, 5])) # Si quisieramos controlar el que no reciba listas, habría que usar isinstance
+print(ordenar_tupla(("c","b","a","d","e"))) # ("a", "b", "c", "d", "e")

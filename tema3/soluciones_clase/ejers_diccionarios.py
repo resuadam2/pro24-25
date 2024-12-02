@@ -5,18 +5,101 @@
 # Escribir una función que reciba un diccionario con las asignaturas y las notas de un alumno y devuelva otro diccionario con las asignaturas en mayúsculas y las calificaciones correspondientes a las notas aprobadas.    
 
 def aprobadas(diccionario: dict) -> dict:
-    pass
+    try:
+        return {asignatura.upper(): nota for asignatura, nota in diccionario.items() if nota >= 5}
+    except AttributeError:
+        print("Error: el argumento debe ser un diccionario")
+        return {}
+    except TypeError:
+        print("Error: las notas deben ser números")
+        return {}
+    except:
+        print("Error inesperado")
+        return {}
+
+def aprobadas_v2(diccionario: dict) -> dict:
+    try:
+        aprobadas = {}
+        for asignatura, nota in diccionario.items():
+            if nota < 0 or nota > 10:
+                raise ValueError("Las notas deben estar entre 0 y 10")
+            if nota >= 5:
+                aprobadas[asignatura.upper()] = nota
+        return aprobadas
+    except AttributeError:
+        print("Error: el argumento debe ser un diccionario")
+        return {}
+    except TypeError:
+        print("Error: las notas deben ser números")
+        return {}
+    except ValueError as e:
+        print(e)
+        return {}
+    except:
+        print("Error inesperado")
+        return {}
+    
+def aprobadas_v3(diccionario: dict) -> dict:
+    try:
+        aprobadas = {}
+        for asignatura, nota in diccionario.items():
+            if nota < 0 or nota > 10:
+                print("Error en la nota de "+ asignatura +": las notas deben estar entre 0 y 10")
+                continue
+            if nota >= 5:
+                aprobadas[asignatura.upper()] = nota
+        return aprobadas
+    except AttributeError:
+        print("Error: el argumento debe ser un diccionario")
+        return {}
+    except TypeError:
+        print("Error: las notas deben ser números")
+        return {}
+    except:
+        print("Error inesperado")
+        return {}
     
 # Pruebas
 print(aprobadas({"Matemáticas": 4, "Lengua": 6, "Historia": 5, "Inglés": 3})) # {'LENGUA': 6, 'HISTORIA': 5}    
-print(aprobadas({"Matemáticas": 5, "Lengua": 5, "Historia": 5, "Inglés": 5})) # {'MATEMÁTICAS': 5, 'LENGUA': 5, 'HISTORIA': 5, 'INGLÉS': 5} 
+print(aprobadas({"Matemáticas": 5, "Lengua": 15, "Historia": 5, "Inglés": 5})) # {'MATEMÁTICAS': 5, 'LENGUA': 5, 'HISTORIA': 5, 'INGLÉS': 5} 
+print(aprobadas({})) # {}
+print(aprobadas({"Matemáticas": "asdf", "Lengua": 13, "Historia": -2, "Inglés": 1})) # {}
+print(aprobadas([1, 2, 3])) # {} # Error
+print(aprobadas(1234)) # {} # Error
+print(aprobadas_v2({"Matemáticas": 5, "Lengua": 15, "Historia": 5, "Inglés": 5})) # {'MATEMÁTICAS': 5, 'LENGUA': 5, 'HISTORIA': 5, 'INGLÉS': 5} 
+print(aprobadas_v3({"Matemáticas": 5, "Lengua": 15, "Historia": 5, "Inglés": 5})) # {'MATEMÁTICAS': 5, 'LENGUA': 5, 'HISTORIA': 5, 'INGLÉS': 5} 
 
 # Ejercicio 2
 
 # Escribir una función que reciba un diccionario con el horario de un alumno y lo recorra imprimiendo los días de la semana y las asignaturas que tiene en cada uno.
 
 def imprimir_horario(diccionario: dict) -> None:
-    pass
+    try:
+        for dia, asignaturas in diccionario.items():
+            if isinstance(asignaturas, str):
+                print(f"{dia}: {asignaturas}")
+                continue
+            print(f"{dia}: {', '.join(asignaturas)}")
+    except AttributeError:
+        print("Error: el argumento debe ser un diccionario")
+    except TypeError:
+        print("El valor de cada día debe ser un elemento iterable, pero no una string")
+    except:
+        print("Error inesperado")
+
+def imprimir_horario_v2(diccionario: dict) -> None:
+    for dia, asignaturas in diccionario.items():
+        print(f"{dia}: ", end="")
+        for i in range(len(asignaturas)-1):
+            print(asignaturas[i], end=", ")
+        print(asignaturas[-1])
+
+def imprimir_horario_v3(diccionario: dict) -> None:
+    for dia, asignaturas in diccionario.items():
+        print(f"{dia}: ", end="")
+        for i in enumerate(asignaturas):
+            print(asignaturas[i], end=", ")
+        print(asignaturas[-1])
 
 # Pruebas
 imprimir_horario({"Lunes": ["Matemáticas", "Lengua"], "Martes": ["Historia", "Inglés"], "Miércoles": ["Física", "Química"]})    
@@ -24,27 +107,72 @@ imprimir_horario({"Lunes": ["Matemáticas", "Lengua"], "Martes": ["Historia", "I
 # Martes: Historia, Inglés
 # Miércoles: Física, Química
 
+imprimir_horario_v2({"Lunes": ["Matemáticas", "Lengua"], "Martes": ["Historia", "Inglés"], "Miércoles": ["Física", "Química"]})    
+imprimir_horario_v2({"Lunes": "Matemáticas", "Martes": ["Historia", "Inglés"], "Miércoles": ["Física", "Química"]})
+imprimir_horario({"Lunes": "Matemáticas", "Martes": ["Historia", "Inglés"], "Miércoles": ["Física", "Química"]})
+imprimir_horario({"Lunes": ["Matemáticas"], "Martes": ["Historia", "Inglés"], "Miércoles": ["Física", "Química"]})
+
 # Ejercicio 3
 
 # Escribir una función que reciba un diccionario con los precios de distintos productos y un diccionario con los productos y la cantidad de cada uno que ha comprado un cliente y devuelva el precio total de la compra.
 
 def precio_total(precios: dict, compra: dict) -> float:
-    pass
+    try:
+        return sum(precios[producto] * cantidad for producto, cantidad in compra.items())
+    except KeyError as e:
+        print(f"Error: el producto {e} no está en el diccionario de precios")
+        return 0
+    except TypeError as e:
+        print("Error: el diccionario de precios y el compra deben contener solo números")
+        return 0
+    except:
+        print("Error inesperado")
+        return 0
     
+def precio_total_v2(precios: dict, compra: dict) -> float:
+    total = 0
+    for producto, cantidad in compra.items():
+        total += precios[producto] * cantidad
+    return total
+
 # Pruebas
-print(precio_total({"Manzanas": 1, "Peras": 2, "Plátanos": 3}, {"Manzanas": 2, "Peras": 1})) # 4    
+print(precio_total({"Manzanas": 1, "Peras": 2, "Plátanos": 3}, { "Peras": 1, "Manzanas": 2})) # 4    
 print(precio_total({"Manzanas": 1, "Peras": 2, "Plátanos": 3}, {"Manzanas": 2, "Peras": 1, "Plátanos": 3})) # 13    
+print(precio_total({"Manzanas": 1, "Plátanos": 3}, {"Peras": 1, "Manzanas": 2, "Plátanos": 3})) # KeyError: 'Peras'
+print(precio_total({"Manzanas": "adsf", "Peras": 2, "Plátanos": 3}, {"Manzanas": 2, "Peras": 1, "Plátanos": 3}))
+print(precio_total({"Manzanas": 1, "Peras": 2, "Plátanos": 3}, {"Manzanas": "asdf", "Peras": 1, "Plátanos": 3}))
+print(precio_total({"Manzanas": "adsf", "Peras": 2, "Plátanos": 3}, {"MANZANAS": 2, "Peras": 1, "Plátanos": 3}))
+
+
 
 # Ejercicio 4
 
 # Escribir una función que reciba un diccionario con las asignaturas y las notas de un alumno y devuelva la media de las notas. 
 
 def media_notas(diccionario: dict) -> float:
-    pass   
+    try: 
+        return sum(diccionario.values()) / len(diccionario)   
+    except ZeroDivisionError:
+        print("Error: el diccionario está vacío")
+        return 0
+    except AttributeError:
+        print("Error: el argumento debe ser un diccionario")
+        return 0
+    except TypeError:
+        print("Error: las notas deben ser números")
+        return 0
+    except:
+        print("Error inesperado")
+        return 0
+
     
 # Pruebas
 print(media_notas({"Matemáticas": 4, "Lengua": 6, "Historia": 5, "Inglés": 3})) # 4.5
 print(media_notas({"Matemáticas": 5, "Lengua": 5, "Historia": 5, "Inglés": 5})) # 5.0
+print(media_notas({}))
+print(media_notas({"Matemáticas": "adsf", "Lengua": 5, "Historia": 5, "Inglés": 5})) 
+print(media_notas(1234)) 
+
 
 # Ejercicio 5
 
