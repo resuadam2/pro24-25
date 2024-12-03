@@ -191,7 +191,20 @@ print(media_notas(1234))
 # Plutón: 5906.4
 
 def distancia_a_tierra(planetas: dict, planeta: str) -> float:
-    pass   
+    try:
+        return round(abs(planetas[planeta] - 149.6), 2)
+    except AttributeError:
+        print("Por favor, introduzca un diccionario con los planetas y sus distancias al sol y un planeta")
+        return -1
+    except TypeError:
+        print("Por favor, introduzca un diccionario con los planetas y sus distancias al sol y un planeta")
+        return -1
+    except KeyError:
+        print("Por favor, introduzca un planeta válido")
+        return -1
+    except:
+        print("Error inesperado")
+        return -1
 
 # Pruebas
 # Distancia de la Tierra al Sol: 149.6
@@ -229,18 +242,59 @@ print(distancia_a_tierra(planetas, "Alderaan")) # -1
 # Escribir una función que reciba una lista de palabras y devuelva un diccionario con las palabras como claves y su longitud como valor.
 
 def longitud_palabras(lista: list) -> dict:
-    pass   
+    try:
+        return {palabra: len(palabra) for palabra in lista}  
+    except TypeError:
+        print("Por favor, introduzca una lista de palabras")
+        return {}
+    except:
+        print("Ha ocurrido un error inesperado")
+        return {}
+
+def longitud_palabras(lista: list) -> dict:
+    try:
+        toret = {}
+        for palabra in lista:
+            toret[palabra] = len(palabra) 
+        return toret
+    except TypeError:
+        print("Por favor, introduzca una lista de palabras")
+        return {}
+    except:
+        print("Ha ocurrido un error inesperado")
+        return {}
     
 # Pruebas
 print(longitud_palabras(["hola", "adiós", "buenos días", "buenas noches"])) # {'hola': 4, 'adiós': 5, 'buenos días': 10, 'buenas noches': 13}
 print(longitud_palabras(["hola", "adiós", "buenos días", "buenas noches", ""])) # {'hola': 4, 'adiós': 5, 'buenos días': 10, 'buenas noches': 13, '': 0}    
+print(longitud_palabras({"hola"}))
 
 # Ejercicio 7
 
 # Escribir una función que reciba una lista de palabras y devuelva un diccionario con las palabras como claves y el número de veces que aparecen como valor.
 
 def frecuencia_palabras(lista: list) -> dict:
-    pass  
+    try:
+        toret = {}
+        for palabra in lista:
+            toret[palabra] = lista.count(palabra)
+        return toret
+    except TypeError:
+        print("Por favor, introduzca una lista de palabras")
+        return {}
+    except:
+        print("Ha ocurrido un error inesperado")
+        return {}
+    
+def frecuencia_palabras(lista: list) -> dict:
+    try:
+        return { palabra: lista.count(palabra) for palabra in lista }
+    except TypeError:
+        print("Por favor, introduzca una lista de palabras")
+        return {}
+    except:
+        print("Ha ocurrido un error inesperado")
+        return {}
     
 # Pruebas
 print(frecuencia_palabras(["hola", "adiós", "hola", "buenos días", "buenas noches"])) # {'hola': 2, 'adiós': 1, 'buenos días': 1, 'buenas noches': 1}   
@@ -248,3 +302,29 @@ print(frecuencia_palabras(["hola", "adiós", "hola", "buenos días", "buenas noc
 
 
 
+# Haz una función que pida al usuario los datos de un coche, los datos son:
+
+"""
+Marca - string
+Color - string
+Cilindrada - entero
+"""
+
+def diccionarioVehiculo():
+    marca = input("Introduce la marca")
+    color = input("Introduce el color del coche")
+    cilindradaOk = False
+    while not cilindradaOk:
+        try:
+            cilindrada = int(input("introduce la cilindrada"))
+            if cilindrada < 1:
+                raise AttributeError("La cilindrada debe ser positiva")
+            cilindradaOk = True
+        except AttributeError as e:
+            print(e)
+        except ValueError:
+            print("La cilindrada debe ser un número entero")
+
+    return {"Marca": marca, "Color": color, "Cilindrada": cilindrada}
+
+print(diccionarioVehiculo())

@@ -5,18 +5,31 @@
 # Escribir una función que reciba dos conjuntos y devuelva un conjunto con los elementos que están en ambos conjuntos.
 
 def interseccion(conjunto1: set, conjunto2: set) -> set:
-    pass
+    try:
+        return conjunto1.intersection(conjunto2)
+    except AttributeError:
+        print("Por favor, introduzca dos conjuntos")
+    except:
+        print("Error inesperado")
+
     
 # Pruebas
 print(interseccion({1, 2, 3}, {3, 4, 5})) # {3}
 print(interseccion({1, 2, 3}, {4, 5, 6})) # set() ya que no tienen elementos en común   
+print(interseccion(4,5))
+print(interseccion({},[1,2,3,4,5]))
 
 # Ejercicio 2
 
 # Escribir una función que reciba dos conjuntos y devuelva un conjunto con los elementos que están en el primer conjunto pero no en el segundo. 
 
 def diferencia(conjunto1: set, conjunto2: set) -> set:
-    pass    
+    try:
+        return conjunto1.difference(conjunto2)
+    except AttributeError:
+        print("Por favor, introduzca dos conjuntos")
+    except:
+        print("Error inesperado")    
     
 # Pruebas
 print(diferencia({1, 2, 3}, {3, 4, 5})) # {1, 2}
@@ -27,7 +40,12 @@ print(diferencia({1, 2, 3}, {4, 5, 6})) # {1, 2, 3} ya que el primer conjunto no
 # Escribir una función que reciba dos conjuntos y devuelva un conjunto con los elementos que están en alguno de los dos conjuntos pero no en los dos. 
 
 def diferencia_simetrica(conjunto1: set, conjunto2: set) -> set:
-    pass   
+    try:
+        return conjunto1.symmetric_difference(conjunto2)
+    except AttributeError:
+        print("Por favor, introduzca dos conjuntos")
+    except:
+        print("Error inesperado")   
     
 # Pruebas
 print(diferencia_simetrica({1, 2, 3}, {3, 4, 5})) # {1, 2, 4, 5}
@@ -38,11 +56,17 @@ print(diferencia_simetrica({1, 2, 3}, {4, 5, 6})) # {1, 2, 3, 4, 5, 6} ya que no
 # Escribir una función que reciba una lista de enteros y devuelva otra lista sin elementos repetidos, para ello se puede convertir la lista en un conjunto y después volver a convertirlo en lista. 
 
 def eliminar_repetidos(lista: list) -> list:
-    pass   
+    try:
+        return list(set(lista))
+    except TypeError:
+        print("Por favor, introduzca una lista")
     
 # Pruebas
 print(eliminar_repetidos([1, 2, 3, 3, 4, 5, 5])) # [1, 2, 3, 4, 5]
 print(eliminar_repetidos([1, 2, 3, 4, 5])) # [1, 2, 3, 4, 5] ya que no hay elementos repetidos  
+print(eliminar_repetidos(1234))
+print(eliminar_repetidos([]))
+print(eliminar_repetidos({2:2,3:3,4:4,3:3}))
 
 # Ejercicio 5
 
