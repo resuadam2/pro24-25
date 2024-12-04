@@ -28,6 +28,8 @@ Comenzaremos programando en Python para aprender las bases mientras vamos introd
 
 ## Enlaces externos de interés y contenido offtopic
 
+- [Retos de programación para practicar](https://github.com/mouredev/retos-programacion-2023)
+
 ### Python
 
 - [Documentación oficial de Python](https://docs.python.org/3/)

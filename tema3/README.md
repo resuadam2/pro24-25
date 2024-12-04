@@ -72,9 +72,5 @@ También vemos otras 3 nuevas estructuras de datos básicas de Python pero exist
 3. [Ejercicios con Tuplas](./solucionario/ejersTuplas.py)
 4. [Ejercicios con Diccionarios](./solucionario/ejersDiccionarios.py)
 
-## Laboratorios del curso resueltos
-
-- [Laboratorio ](./labs/)
-
 ### Así resolvimos los ejercicios en clase:
 [Soluciones clase](./soluciones_clase/)
