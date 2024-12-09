@@ -10,6 +10,9 @@ También vemos otras 3 nuevas estructuras de datos básicas de Python pero exist
 - [Tuplas en Python](./apuntes_y_ejemplos/tuplas.py)
 - [Diccionarios en Python](./apuntes_y_ejemplos/diccionarios.py)
 - [Conjuntos en Python](./apuntes_y_ejemplos/conjuntos.py)
+- [Ejemplo usos de random en Python](./apuntes_y_ejemplos/uso_random.py)
+- [Ejemplo de una posible solución del examen](./solucionario/sol_examen_ud3.py)
+
 
 ## Enunciados ejercicios
 
