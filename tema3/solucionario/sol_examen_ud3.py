@@ -137,7 +137,7 @@ def compararFrutas(frutas1: set, frutas2: set, frutas3: set) -> dict:
     try:
         frutasTotales = frutas1.union(frutas2).union(frutas3)
         frutasComunes = frutas1.intersection(frutas2).intersection(frutas3)
-        frutasUnicas = (frutas1.union(frutas2).union(frutas3)).difference(frutas1.intersection(frutas2).intersection(frutas3))
+        frutasUnicas = frutas1.symmetric_difference(frutas2).symmetric_difference(frutas3).difference(frutasComunes)
         return {"FrutasTotales": frutasTotales, "FrutasComunes": frutasComunes, "FrutasUnicas": frutasUnicas}
     except TypeError:
         print("Las frutas deben ser conjuntos.")
