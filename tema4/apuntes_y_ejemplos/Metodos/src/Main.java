@@ -86,5 +86,6 @@ public class Main {
      * 3. Métodos con retorno y sin parámetros
      * 4. Métodos con retorno y con parámetros
      * 5. Métodos con retorno y con un número variable de parámetros
+     * 6. Métodos sin retorno y con un número variable de parámetros
      */
 }
