@@ -13,6 +13,12 @@ También vemos otras 3 nuevas estructuras de datos básicas de Python pero exist
 - [Ejemplo usos de random en Python](./apuntes_y_ejemplos/uso_random.py)
 - [Ejemplo de una posible solución del examen](./solucionario/sol_examen_ud3.py)
 
+## Proyectos de navidad
+
+- Tres en raya en Python | [Ejemplo de solución](./solucionario/tictactoe.py)
+- Sudoku en Python
+- Ahorcado en Python
+
 
 ## Enunciados ejercicios
 
